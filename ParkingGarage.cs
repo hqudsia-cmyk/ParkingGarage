@@ -133,7 +133,7 @@ namespace ParkingGarage
             if (v == null)
             {
                 Console.WriteLine("Vehicle not found!");
-                return;
+                return;  
             }
 
             double minutes = (DateTime.Now - v.ParkedTime).TotalMinutes;
