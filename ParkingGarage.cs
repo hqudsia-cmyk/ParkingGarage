@@ -8,18 +8,18 @@ namespace ParkingGarage
 {
     internal class ParkingGarage//Handles logic
     {
-        public int TotalSpaces { get; } = 15; // total parking spaces
-        private List<Vehicle> vehicles = new List<Vehicle>();
-        private Random random = new Random();
+        public int TotalSpaces { get; set; } = 15; // total parking spaces
+        public List<Vehicle> vehicles = new List<Vehicle>();
+        public Random random = new Random();
 
         // Property to check used spaces
-        private double UsedSpaces
+        public double UsedSpaces
         {
             get { return vehicles.Sum(v => v.Size); }
         }
 
         // Method to create a random registration number
-        private string GenerateRegNo()
+        public string GenerateRegNo()
         {
             string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             string numbers = "0123456789";
@@ -34,7 +34,7 @@ namespace ParkingGarage
         
         public void ParkVehicle()
         {
-            Console.WriteLine("\nEnter vehicle type (car/mc/bus): ");
+            Console.WriteLine("\n Enter vehicle type (car/mc/bus): ");
             string type = Console.ReadLine().ToLower();
 
             if (UsedSpaces >= TotalSpaces)
@@ -143,6 +143,7 @@ namespace ParkingGarage
 
             vehicles.Remove(v);
             Console.WriteLine("Vehicle checked out.\n");
+            
         }
     }
 }

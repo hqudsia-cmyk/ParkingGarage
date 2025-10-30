@@ -7,7 +7,7 @@ namespace ParkingGarage
 {
     internal class Program
     {
-        static void Main()
+        static void Main(string[]args)
         {
             ParkingGarage garage = new ParkingGarage();
             bool running = true;
@@ -24,14 +24,19 @@ namespace ParkingGarage
 
                 if (choice == "1")
                     garage.ParkVehicle();
+                
                 else if (choice == "2")
                     garage.ShowVehicles();
+
                 else if (choice == "3")
                     garage.CheckOutVehicle();
+
                 else if (choice == "4")
                     running = false;
+
                 else
                     Console.WriteLine("Invalid choice!");
+                
             }
         }
     }

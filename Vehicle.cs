@@ -22,9 +22,9 @@ namespace ParkingGarage
             ParkedTime = DateTime.Now;
         }
 
-        public virtual string GetInfo()
+        public  string GetInfo()
         {
-            return $"{RegNo} {Color}";
+            return $"{RegNo} {Color}{Size}";
         }
     }
 
