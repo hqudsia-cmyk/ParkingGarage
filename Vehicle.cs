@@ -24,7 +24,7 @@ namespace ParkingGarage
 
         public  string GetInfo()
         {
-            return $"{RegNo} {Color}{Size}";
+            return $"{RegNo} {Color} {Size}";
         }
     }
 
